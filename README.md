@@ -21,14 +21,16 @@ If there is an error or bug in any of the tests, you may correct that error._
 * _Open terminal and type 'git clone [git link]'_
 * _Navigate to project directory using cd in terminal_
 * _Open project in text editor (atom .)_
-* _Type 'bundle install' in terminal to load Gems_
+* _Type 'bundle install' in terminal to load Gems (if you have capybara version incompatible issue with current version of ruby, try "/Users/[User Name]/.rubies/ruby-2.6.3/bin/bundle install" instead of "bundle install"_
 * _To run tests, type 'rspec' in terminal_
-* _postgres DB installation with sql script in project_
+* _postgres DB installation with sql script in project (if your Postgres DB is not starting at login, please execute "pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start" on terminal._
 
 ## Specs
 | Behavior      | Input         | Output |
 | ------------- |:-------------:| ------:|
 | DB Schema design  |
+| DB creation for test and product with sql script |
+|  
 
 ## Known Bugs
 
