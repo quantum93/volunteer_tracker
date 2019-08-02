@@ -17,9 +17,9 @@ get ('/projects') do
   erb(:projects)
 end
 
-get ('/projects/new') do
-  erb(:new_project)
-end
+# get ('/projects/new') do
+#   erb(:new_project)
+# end
 
 get ('/projects/:id') do
   @project = Project.find(params[:id].to_i)
