@@ -23,10 +23,16 @@ class Project
   end
 
   def self.find(id)
+    id = id.to_i
     project = DB.exec("SELECT * FROM project WHERE id = #{id};").first
-    title = project.fetch("title")
-    id = project.fetch("id")
-    Project.new({:title => title, :id => id})
+    if project
+      title = project.fetch("title")
+      Project.new({:title => title, :id => id})
+    end
+    # project = DB.exec("SELECT * FROM project WHERE id = #{id};").first
+    # title = project.fetch("title")
+    # id = project.fetch("id")
+    # Project.new({:title => title, :id => id})
   end
 
   def save
@@ -34,9 +40,14 @@ class Project
     @id = result.first().fetch("id").to_i
   end
 
-  def update(title)
-    @title = title
-    DB.exec("UPDATE project SET title = '#{@title}' WHERE id = #{@id};")
+  def update(attributes)
+    new_title = attributes.fetch(:title)
+    if new_title
+      @title = new_title
+      DB.exec("UPDATE project SET title = '#{new_title}' WHERE id = #{@id};")
+    end
+    # @title = title
+    # DB.exec("UPDATE project SET title = '#{@title}' WHERE id = #{@id};")
   end
 
   def delete
