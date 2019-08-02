@@ -34,7 +34,8 @@ If there is an error or bug in any of the tests, you may correct that error._
 | unit test for project class with first two test pass |
 | unit test for volunteer class with multiple test pass |
 | fix PG::ForeignKeyViolation: error to pass unit test of volunteer class |
-
+| CURD with viewing page for project class function |
+| 
 
 ## Known Bugs
 
