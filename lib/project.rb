@@ -40,14 +40,14 @@ class Project
     @id = result.first().fetch("id").to_i
   end
 
-  def update(attributes)
-    new_title = attributes.fetch(:title)
-    if new_title
-      @title = new_title
-      DB.exec("UPDATE project SET title = '#{new_title}' WHERE id = #{@id};")
-    end
-    # @title = title
-    # DB.exec("UPDATE project SET title = '#{@title}' WHERE id = #{@id};")
+  def update(title)
+    # new_title = attributes[:title]
+    # if new_title
+    #   @title = new_title
+    #   DB.exec("UPDATE project SET title = '#{new_title}' WHERE id = #{@id};")
+    # end
+    @title = title
+    DB.exec("UPDATE project SET title = '#{@title}' WHERE id = #{@id};")
   end
 
   def delete
