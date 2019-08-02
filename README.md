@@ -30,6 +30,8 @@ If there is an error or bug in any of the tests, you may correct that error._
 | ------------- |:-------------:| ------:|
 | DB Schema design  |
 | DB creation for test and product with sql script |
+| writing of class for each project and volunteer  |
+| unit test for project class with first two test pass |
 |  
 
 ## Known Bugs

@@ -6,8 +6,6 @@ CREATE TABLE "project" (
   OIDS=FALSE
 );
 
-
-
 CREATE TABLE "volunteer" (
 	"id" serial NOT NULL,
 	"project_id" int NOT NULL,
@@ -17,8 +15,4 @@ CREATE TABLE "volunteer" (
   OIDS=FALSE
 );
 
-
-
-
 ALTER TABLE "volunteer" ADD CONSTRAINT "volunteer_fk0" FOREIGN KEY ("project_id") REFERENCES "project"("id");
-
